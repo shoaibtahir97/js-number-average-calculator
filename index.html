@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average Calculator</title>
+</head>
+<body>
+    <h1>Average Calculator of Numbers</h1>
+
+
+    <form onsubmit="calculateAverage(); return false" >
+        <input type="number" min="1"  name="" required id="num1" placeholder = "enter number"> <br> 
+        <input type="number" min="1"  name="" required id="num2" placeholder = "enter number"> <br>
+        <input type="number" min="1"  name="" required id="num3" placeholder = "enter number"> <br>
+        <input type="number" min="1"  name="" required id="num4" placeholder = "enter number"> <br>
+        <input type="number" min="1"  name="" required id="num5" placeholder = "enter number"> <br>
+        <input type="number" min="1"  name="" required id="num6" placeholder = "enter number"> <br>
+        <input type="number" min="1"  name="" required id="num7" placeholder = "enter number"> <br>
+        <input type="number" min="1"  name="" required id="num8" placeholder = "enter number"> <br>
+        <input type="number" min="1"  name="" required id="num9" placeholder = "enter number"> <br>
+        <input type="number" min="1"  name="" required id="num10" placeholder = "enter number"> <br>
+        <br>
+        <button type="submit">Calculate Average</button>
+    </form>
+     <h3 id="result"></h3>
+    <script>
+        function calculateAverage() {
+            let num1 = parseInt( document.querySelector("#num1").value)
+            let num2 = parseInt(document.querySelector("#num2").value)
+            let num3 = parseInt(document.querySelector("#num3").value)
+            let num4 = parseInt(document.querySelector("#num4").value)
+            let num5 = parseInt(document.querySelector("#num5").value)
+            let num6 = parseInt(document.querySelector("#num6").value)
+            let num7 = parseInt(document.querySelector("#num7").value)
+            let num8 = parseInt(document.querySelector("#num8").value)
+            let num9 = parseInt(document.querySelector("#num9").value)
+            let num10 = parseInt(document.querySelector("#num10").value)
+            
+            let average = num1 + num2 + num3 + num4 + num5  + num6 + num7 + num8 + num9 + num10;
+            average /= 10;
+            let result = document.querySelector("#result")
+            result.innerHTML = `The average of the given numbers is ${average}`
+        }
+
+    </script>
+</body>
+</html>
